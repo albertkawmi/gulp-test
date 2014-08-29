@@ -10,15 +10,15 @@
 
 // Require modules
 var gulp   = require('gulp');						          // http://travismaynard.com/writing/getting-started-with-gulp
-var rename = require('gulp-rename'); 				      // https://www.npmjs.org/package/gulp-rename
-var jshint = require('gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/
-var concat = require('gulp-concat'); 				      // https://www.npmjs.org/package/gulp-concat/
-var uglify = require('gulp-uglify'); 				      // https://www.npmjs.org/package/gulp-uglify/
-var sass = require('gulp-sass'); 					        // https://www.npmjs.org/package/gulp-sass/
-var prefix = require('gulp-autoprefixer'); 			  // https://www.npmjs.org/package/gulp-autoprefixer/
-var minifyCSS = require('gulp-minify-css'); 		  // https://www.npmjs.org/package/gulp-minify-css/
-var minifyHTML = require('gulp-minify-html'); 		// https://www.npmjs.org/package/gulp-minify-html/
-var imageResize = require('gulp-image-resize'); 	// https://www.npmjs.org/package/gulp-image-resize/
+var rename = require('../node_modules/gulp-rename'); 				      // https://www.npmjs.org/package/gulp-rename
+var jshint = require('../node_modules/gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/
+var concat = require('../node_modules/gulp-concat'); 				      // https://www.npmjs.org/package/gulp-concat/
+var uglify = require('../node_modules/gulp-uglify'); 				      // https://www.npmjs.org/package/gulp-uglify/
+var sass = require('../node_modules/gulp-sass'); 					        // https://www.npmjs.org/package/gulp-sass/
+var prefix = require('../node_modules/gulp-autoprefixer'); 			  // https://www.npmjs.org/package/gulp-autoprefixer/
+var minifyCSS = require('../node_modules/gulp-minify-css'); 		  // https://www.npmjs.org/package/gulp-minify-css/
+var minifyHTML = require('../node_modules/gulp-minify-html'); 		// https://www.npmjs.org/package/gulp-minify-html/
+var imageResize = require('../node_modules/gulp-image-resize'); 	// https://www.npmjs.org/package/gulp-image-resize/
 
 // Concatenate, Lint & Minify JavaScript files
 gulp.task('scripts', function() {
@@ -66,12 +66,12 @@ gulp.task('html', function() {
 gulp.task('images', function () {
   gulp.src('src/images/*')
     .pipe(imageResize({ 
-      width : 1000,
+      width : 1300,
       //height : 100,
       upscale : false, // Only shrink, don't stretch images
       crop : false,
       gravity : 'Center',
-      quality : 0.7,
+      quality : 0.3,
       upscale : false,
       //format : '?',
       imageMagick : true
