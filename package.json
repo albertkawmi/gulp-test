@@ -1,17 +1,17 @@
 {
-  "name": "gulp-test",
+  "name": "quickstart",
   "version": "0.0.0",
-  "description": "Testing Gulp",
+  "description": "A quick web project scaffold.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/albertkawmi/quickstart"
   },
   "keywords": [
-    "gulp"
+    "quickstart"
   ],
   "author": "Albert Kawmi",
   "license": "ISC",
