@@ -1,14 +1,16 @@
 // Default gulpfile.js
-// 2014-08-28
+// Created 2014-08-28 by Albert Kawmi
 
 // Install following dependencies via command line
-// npm install gulp-rename gulp-jshint gulp-concat gulp-uglify gulp-sass gulp-autoprefixer gulp-minify-css gulp-minify-html gulp-imagemin gulp-image-resize gulp-connect --save-dev
+// npm install gulp-rename gulp-jshint gulp-concat gulp-uglify gulp-sass gulp-autoprefixer gulp-minify-css gulp-minify-html gulp-imagemin gulp-image-resize --save-dev
+
+// Need to install ImageMagick for the images task to work
 
 // Also will look into https://www.npmjs.org/package/gulp-ssg
 
 // Require modules
 var gulp   = require('gulp');						          // http://travismaynard.com/writing/getting-started-with-gulp
-var rename = require("gulp-rename"); 				      // https://www.npmjs.org/package/gulp-rename
+var rename = require('gulp-rename'); 				      // https://www.npmjs.org/package/gulp-rename
 var jshint = require('gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/
 var concat = require('gulp-concat'); 				      // https://www.npmjs.org/package/gulp-concat/
 var uglify = require('gulp-uglify'); 				      // https://www.npmjs.org/package/gulp-uglify/
@@ -17,7 +19,6 @@ var prefix = require('gulp-autoprefixer'); 			  // https://www.npmjs.org/package
 var minifyCSS = require('gulp-minify-css'); 		  // https://www.npmjs.org/package/gulp-minify-css/
 var minifyHTML = require('gulp-minify-html'); 		// https://www.npmjs.org/package/gulp-minify-html/
 var imageResize = require('gulp-image-resize'); 	// https://www.npmjs.org/package/gulp-image-resize/
-var connect = require('gulp-connect');            // https://www.npmjs.org/package/gulp-connect
 
 // Concatenate, Lint & Minify JavaScript files
 gulp.task('scripts', function() {
@@ -78,28 +79,13 @@ gulp.task('images', function () {
     .pipe(gulp.dest('www/images'));
 });
 
-// LiveReload
-gulp.task('connect', function() {
-  connect.server({
-    root: 'www',
-    //port: '8764',
-    livereload: true
-  });
-});
-
-gulp.task('reload', function () {
-  gulp.src('www/*.html')
-    .pipe(connect.reload());
-});
-
 // NOT IN DEFAULT TASK - run separately with: $ gulp watch
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/html/*.html', ['html']);
-    gulp.watch('www/*.html', ['reload']);
 });
 
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'html', 'connect', 'watch']);
+gulp.task('default', ['scripts', 'sass', 'html']);
