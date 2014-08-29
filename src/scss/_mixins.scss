@@ -1,0 +1,17 @@
+@mixin reset-space($value) {
+	padding: $value + rem;
+	margin: $value + rem;
+	line-height: $value + rem;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

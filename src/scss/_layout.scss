@@ -1,0 +1,30 @@
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+.row {
+	font-size: 0;
+}
+
+.box-3 {
+	display: inline-block;
+	width: 31.3333%;
+	font-size: 0.9rem;
+	padding: 0.5rem;
+	vertical-align: top;
+	margin: 1%;
+}
+
+.pale-bg {
+	background-color: $palest;
+}
+
+.white-bg {
+	background-color: white;
+}
+
+.darkest-bg {
+	background-color: $darkest;
+}
