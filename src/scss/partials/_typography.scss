@@ -8,10 +8,11 @@
 
 // Base font
 html {
-	line-height: 1.25em;
-	font-size: 14px;
-	@include mq(medium) { font-size: 16px; }
-	@include mq(large) { font-size: 18px; }
+	font-family: $base-font-family-sans;
+	line-height: $base-line-height;
+	font-size: $base-font-size-small;
+	@include mq(medium) { font-size: $base-font-size-medium; }
+	@include mq(large) { font-size: $base-font-size-large; }
 }
 
 // Headings
@@ -27,8 +28,8 @@ h3 {
 	font-size: 2em;
 }
 
-// Paragraph
-p {
+// Paragraph & default div
+p, div {
+	font-family: $base-font-family-serif;
 	font-size: 1em;
-	line-height: 1.25em;
 }

@@ -71,7 +71,7 @@ gulp.task('images', function () {
       upscale : false, // Only shrink, don't stretch images
       crop : false,
       gravity : 'Center',
-      quality : 0.7,
+      quality : 0.5,
       upscale : false,
       //format : '?',
       imageMagick : true

@@ -8,17 +8,17 @@ $break-small: $iphone;
 $break-large: $ipad-landscape;
 
 @mixin mq($media) {
-  @if $media == small {
+  @if $media == phone {
     @media only screen and (max-width: $break-small) { @content; }
   }
-  @else if $media == medium {
+  @else if $media == tablet {
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-large) { @content; }
   }
-  @else if $media == large {
+  @else if $media == desktop {
     @media only screen and (min-width: $break-large + 1) { @content; }
   }
 }
-
+/*
 .example-usage {
   float: left;
   width: 250px;
@@ -26,3 +26,22 @@ $break-large: $ipad-landscape;
   @include mq(medium) { width: 125px; }
   @include mq(large) { float: none; }
 }
+*/
+// Mixin for columns
+@mixin columns($columns, $margin-percentage) {
+  .columns-#{$columns} {
+    width: (100/$columns - $margin-percentage + $margin-percentage/$columns) * 1%;
+    margin-right: $margin-percentage * 1%;
+    display: block;
+    float: left;
+    clear: none;
+    vertical-align: top;
+    @include mq(phone) { width: (100 - $margin-percentage)*1%; float: none; margin: 0.5*$margin-percentage*1% auto; }
+  }
+  .columns-#{$columns}:last-child { 
+    margin-right: 0;
+    @include mq(phone) {margin: 0.5*$margin-percentage*1% auto;}
+    }
+}
+
+.row {overflow: hidden; padding:0; margin: 0;} //needed to contain columns
