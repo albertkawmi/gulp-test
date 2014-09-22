@@ -11,7 +11,7 @@
 // Require modules
 var gulp   = require('gulp');						          // http://travismaynard.com/writing/getting-started-with-gulp
 var rename = require('gulp-rename'); 				      // https://www.npmjs.org/package/gulp-rename
-var jshint = require('gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/
+//var jshint = require('gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/ (I'm using jshint in Sublime Text)
 var concat = require('gulp-concat'); 				      // https://www.npmjs.org/package/gulp-concat/
 var uglify = require('gulp-uglify'); 				      // https://www.npmjs.org/package/gulp-uglify/
 var sass = require('gulp-sass'); 					        // https://www.npmjs.org/package/gulp-sass/
@@ -25,8 +25,8 @@ gulp.task('scripts', function() {
     return gulp.src('src/js/*.js')
         .pipe(concat('source.js'))
         .pipe(gulp.dest('src/js/concat'))
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
         .pipe(uglify())
         .pipe(rename('source.min.js'))
         .pipe(gulp.dest('www'));
@@ -66,13 +66,12 @@ gulp.task('html', function() {
 gulp.task('images', function () {
   gulp.src('src/images/*')
     .pipe(imageResize({ 
-      width : 1000,
+      width : 1300,
       //height : 100,
       upscale : false, // Only shrink, don't stretch images
       crop : false,
       gravity : 'Center',
-      quality : 0.5,
-      upscale : false,
+      quality : 0.6,
       //format : '?',
       imageMagick : true
     }))
