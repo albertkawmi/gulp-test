@@ -355,7 +355,7 @@ img {
 div {
   border: solid 1px gray;
   box-sizing: border-box;
-  padding: 1em; }
+  padding: 2%; }
 
 .columns-4 {
   width: 23.5%;
