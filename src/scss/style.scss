@@ -10,3 +10,4 @@ img { max-width: 100%; }
 div { border: solid 1px gray; box-sizing: border-box; padding: 2%;}
 
 @include columns(4, 2);
+@include columns(3, 0);

@@ -334,16 +334,22 @@ td, th {
 html {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.25;
-  font-size: 14px; }
+  font-size: 16px; }
+  @media only screen and (min-width: 501px) and (max-width: 960px) {
+    html {
+      font-size: 18px; } }
+  @media only screen and (min-width: 961px) {
+    html {
+      font-size: 20px; } }
 
 h1 {
-  font-size: 4em; }
+  font-size: 3.4231em; }
 
 h2 {
-  font-size: 3em; }
+  font-size: 2.1154em; }
 
 h3 {
-  font-size: 2em; }
+  font-size: 1.3077em; }
 
 p, div {
   font-family: Georgia, serif;
@@ -364,7 +370,7 @@ div {
   float: left;
   clear: none;
   vertical-align: top; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 500px) {
     .columns-4 {
       width: 98%;
       float: none;
@@ -372,6 +378,25 @@ div {
 
 .columns-4:last-child {
   margin-right: 0; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 500px) {
     .columns-4:last-child {
       margin: 1% auto; } }
+
+.columns-3 {
+  width: 33.33333%;
+  margin-right: 0%;
+  display: block;
+  float: left;
+  clear: none;
+  vertical-align: top; }
+  @media only screen and (max-width: 500px) {
+    .columns-3 {
+      width: 100%;
+      float: none;
+      margin: 0% auto; } }
+
+.columns-3:last-child {
+  margin-right: 0; }
+  @media only screen and (max-width: 500px) {
+    .columns-3:last-child {
+      margin: 0% auto; } }
