@@ -11,25 +11,47 @@ html {
 	font-family: $base-font-family-sans;
 	line-height: $base-line-height;
 	font-size: $base-font-size-small;
-	@include mq(medium) { font-size: $base-font-size-medium; }
-	@include mq(large) { font-size: $base-font-size-large; }
+	@include mq(tablet) { font-size: $base-font-size-medium; }
+	@include mq(desktop) { font-size: $base-font-size-large; }
 }
 
 // Headings
 h1 {
-	font-size: 4em;
+	font-size: 3.4231em;
 }
 
 h2 {
-	font-size: 3em;
+	font-size: 2.1154em;
 }
 
 h3 {
-	font-size: 2em;
+	font-size: 1.3077em;
 }
 
 // Paragraph & default div
-p, div {
+p {
 	font-family: $base-font-family-serif;
 	font-size: 1em;
+}
+
+footer p {
+	font-size: 0.5em;
+	font-family: $base-font-family-sans;
+}
+
+// misc text-holding elements
+pre, code { font-family: $base-font-family-mono; }
+
+blockquote { font-family: $base-font-family-sans; line-height: 2; }
+
+figcaption, caption {
+    font-style: italic;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+caption { 
+    font-size: 1em; 
+    font-style: normal;
+    font-weight: bold;
 }

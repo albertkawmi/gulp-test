@@ -1,8 +1,3 @@
-//  Break points for various devices
-$iphone: 320px;
-$ipad-portrait: 768px;
-$ipad-landscape: 1024px;
-
 // Mixins for responsive design
 $break-small: $iphone;
 $break-large: $ipad-landscape;
@@ -44,4 +39,6 @@ $break-large: $ipad-landscape;
     }
 }
 
+/*
 .row {overflow: hidden; padding:0; margin: 0;} //needed to contain columns
+*/

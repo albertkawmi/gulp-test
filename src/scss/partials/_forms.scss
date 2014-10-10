@@ -1,0 +1,45 @@
+form {}
+
+label {
+	background-color: $color-light;
+	color: $color-dark;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	display: block;
+	width: 100%;
+}
+
+input, textarea, select, fieldset {
+	padding: 0.5em;
+	border: solid 2px $color-light;
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+	border-bottom: solid 2px $color-highlight;
+}
+
+input[type=radio], input[type=checkbox] {
+	width: auto;
+	display: inline;
+	margin: 0 0.5em 0 1em;
+}
+
+button {
+	border-radius: 5px;
+	background-color: $color-medium;
+	color: $color-white;
+	width: 100%;
+	border: 0;
+	padding: 0.5em;
+	margin-top: 0.5em;
+}
+
+button:hover {
+	background-color: $color-light;
+	color: $color-dark;
+}
+
+form li { display: inline; }

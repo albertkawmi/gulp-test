@@ -35,8 +35,8 @@ gulp.task('scripts', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
     return gulp.src('src/scss/*.scss')
-        .pipe(sass())
-        //.pipe(gulp.dest('src/css'))
+      .pipe(sass())
+      //.pipe(gulp.dest('src/css'))
   		.pipe(prefix('last 3 versions', '> 1%'))
   		.pipe(rename('style.prefix.css'))
     	.pipe(gulp.dest('src/css'))
@@ -56,9 +56,14 @@ gulp.task('html', function() {
     	quotes:true
     };
 
-  gulp.src('src/html/*.html')
+  gulp.src('src/html/**/*.html')
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest('www'));
+});
+
+gulp.task('fonts', function() {
+  gulp.src('src/fonts/*.*')
+    .pipe(gulp.dest('www/fonts'));
 });
 
 // NOT IN DEFAULT TASK - run this task separately with: $ gulp images
@@ -66,12 +71,12 @@ gulp.task('html', function() {
 gulp.task('images', function () {
   gulp.src('src/images/*')
     .pipe(imageResize({ 
-      width : 1300,
+      width : 650,
       //height : 100,
-      upscale : false, // Only shrink, don't stretch images
+      upscale : false, // false = only shrink, don't stretch images
       crop : false,
       gravity : 'Center',
-      quality : 0.6,
+      quality : 0.7,
       //format : '?',
       imageMagick : true
     }))
@@ -84,7 +89,8 @@ gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/html/*.html', ['html']);
+    gulp.watch('src/fonts/*.*', ['fonts']);
 });
 
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'html']);
+gulp.task('default', ['scripts', 'sass', 'html', 'fonts']);
