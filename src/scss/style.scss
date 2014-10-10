@@ -3,16 +3,5 @@
 @import 'modules/all';
 @import 'partials/all';
 
-<<<<<<< HEAD
 // Give Divs border for testing
 // div { border: solid 1px gray; box-sizing: border-box; padding: 2%;}
-=======
-
-// For testing only
-img { max-width: 100%; }
-
-div { border: solid 1px gray; box-sizing: border-box; padding: 2%;}
-
-@include columns(4, 2);
-@include columns(3, 0);
->>>>>>> origin/master

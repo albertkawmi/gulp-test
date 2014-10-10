@@ -1948,19 +1948,11 @@ select, select, select {
 html {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.25;
-<<<<<<< HEAD
   font-size: 14px; }
   @media only screen and (min-width: 321px) and (max-width: 1024px) {
     html {
       font-size: 16px; } }
   @media only screen and (min-width: 1025px) {
-=======
-  font-size: 16px; }
-  @media only screen and (min-width: 501px) and (max-width: 960px) {
-    html {
-      font-size: 18px; } }
-  @media only screen and (min-width: 961px) {
->>>>>>> origin/master
     html {
       font-size: 20px; } }
 
@@ -2009,7 +2001,7 @@ caption {
   float: left;
   clear: none;
   vertical-align: top; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 320px) {
     .columns-4 {
       width: 98%;
       float: none;
@@ -2017,23 +2009,17 @@ caption {
 
 .columns-4:last-child {
   margin-right: 0; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 320px) {
     .columns-4:last-child {
       margin: 1% auto; } }
 
 .columns-3 {
-<<<<<<< HEAD
   width: 32%;
   margin-right: 2%;
-=======
-  width: 33.33333%;
-  margin-right: 0%;
->>>>>>> origin/master
   display: block;
   float: left;
   clear: none;
   vertical-align: top; }
-<<<<<<< HEAD
   @media only screen and (max-width: 320px) {
     .columns-3 {
       width: 98%;
@@ -2233,16 +2219,3 @@ button:hover {
 
 form li {
   display: inline; }
-=======
-  @media only screen and (max-width: 500px) {
-    .columns-3 {
-      width: 100%;
-      float: none;
-      margin: 0% auto; } }
-
-.columns-3:last-child {
-  margin-right: 0; }
-  @media only screen and (max-width: 500px) {
-    .columns-3:last-child {
-      margin: 0% auto; } }
->>>>>>> origin/master

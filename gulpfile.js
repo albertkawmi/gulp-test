@@ -2,7 +2,7 @@
 // Created 2014-08-28 by Albert Kawmi
 
 // Install following dependencies via command line
-// $ npm install gulp-rename gulp-concat gulp-uglify gulp-sass gulp-autoprefixer gulp-minify-css gulp-minify-html gulp-imagemin gulp-image-resize --save-dev
+// npm install gulp-rename gulp-jshint gulp-concat gulp-uglify gulp-sass gulp-autoprefixer gulp-minify-css gulp-minify-html gulp-imagemin gulp-image-resize --save-dev
 
 // Need to install ImageMagick for the images task to work
 
@@ -11,6 +11,7 @@
 // Require modules
 var gulp   = require('gulp');						          // http://travismaynard.com/writing/getting-started-with-gulp
 var rename = require('gulp-rename'); 				      // https://www.npmjs.org/package/gulp-rename
+//var jshint = require('gulp-jshint'); 				      // https://www.npmjs.org/package/gulp-jshint/ (I'm using jshint in Sublime Text)
 var concat = require('gulp-concat'); 				      // https://www.npmjs.org/package/gulp-concat/
 var uglify = require('gulp-uglify'); 				      // https://www.npmjs.org/package/gulp-uglify/
 var sass = require('gulp-sass'); 					        // https://www.npmjs.org/package/gulp-sass/
@@ -21,9 +22,11 @@ var imageResize = require('gulp-image-resize'); 	// https://www.npmjs.org/packag
 
 // Concatenate, Lint & Minify JavaScript files
 gulp.task('scripts', function() {
-    return gulp.src(['src/js/lib/*.js','src/js/*.js']) // Puts contents of lib folder first. Can specify order for each project
-        .pipe(concat('source.concat.js'))
+    return gulp.src('src/js/*.js')
+        .pipe(concat('source.js'))
         .pipe(gulp.dest('src/js/concat'))
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
         .pipe(uglify())
         .pipe(rename('source.min.js'))
         .pipe(gulp.dest('www'));
@@ -84,7 +87,7 @@ gulp.task('images', function () {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/html/*.html', ['html']);
     gulp.watch('src/fonts/*.*', ['fonts']);
 });

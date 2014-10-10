@@ -1,15 +1,15 @@
 // Mixins for responsive design
-$break-small: 500px;
-$break-large: 960px;
+$break-small: $iphone;
+$break-large: $ipad-landscape;
 
 @mixin mq($media) {
-  @if $media == small {
+  @if $media == phone {
     @media only screen and (max-width: $break-small) { @content; }
   }
-  @else if $media == medium {
+  @else if $media == tablet {
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-large) { @content; }
   }
-  @else if $media == large {
+  @else if $media == desktop {
     @media only screen and (min-width: $break-large + 1) { @content; }
   }
 }
@@ -31,11 +31,11 @@ $break-large: 960px;
     float: left;
     clear: none;
     vertical-align: top;
-    @include mq(small) { width: (100 - $margin-percentage)*1%; float: none; margin: 0.5*$margin-percentage*1% auto; }
+    @include mq(phone) { width: (100 - $margin-percentage)*1%; float: none; margin: 0.5*$margin-percentage*1% auto; }
   }
   .columns-#{$columns}:last-child { 
     margin-right: 0;
-    @include mq(small) {margin: 0.5*$margin-percentage*1% auto;}
+    @include mq(phone) {margin: 0.5*$margin-percentage*1% auto;}
     }
 }
 
