@@ -2,24 +2,25 @@
 <html>
 <head>
 	<title>Test Page | Site built with Gulp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.min.css"/>
 	<script type="text/javascript" src="source.min.js"></script>
 </head>
 <body>
 <!-- Header :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-<div class="row">
-	<header>
-		<h1>Test Page</h1>	
-	</header>
-<!-- Nav :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-	<nav>
-		<ul>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-		</ul>
-	</nav>
-</div>
+<header>
+	<div class="row">
+		<h1 class="site-title"><i class="fa fa-plug"></i> Test Page</h1>	
+		<nav>
+			<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+			</ul>
+		<div class="menu-button"><i class="fa fa-bars"></i></div>
+		</nav>
+	</div>
+</header>
 <!-- Main :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <main>
 	<section>
@@ -37,19 +38,19 @@
 	<section>
 		<div class="row">
 			<h2>Row of four</h2>
-			<div class="columns-4">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. </div>
-			<div class="columns-4">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-			<div class="columns-4">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </div>
-			<div class="columns-4">Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</div>
+			<div class="columns-4-margin-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. </div>
+			<div class="columns-4-margin-2">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+			<div class="columns-4-margin-2">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </div>
+			<div class="columns-4-margin-2">Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</div>
 		</div>
 	</section>
 	<section>
 		<div class="row">
 			<h2>Font Awesome</h2>
-			<div class="columns-4"><i class="fa fa-check fa-5x"></i></div>
-			<div class="columns-4"><i class="fa fa-heart fa-5x"></i></div>
-			<div class="columns-4"><i class="fa fa-bar-chart fa-5x"></i></div>
-			<div class="columns-4"><i class="fa fa-line-chart fa-5x"></i></div>
+			<div class="columns-4-margin-2 center"><i class="fa fa-check fa-5x"></i></div>
+			<div class="columns-4-margin-2 center"><i class="fa fa-heart fa-5x"></i></div>
+			<div class="columns-4-margin-2 center"><i class="fa fa-bar-chart fa-5x"></i></div>
+			<div class="columns-4-margin-2 center"><i class="fa fa-line-chart fa-5x"></i></div>
 		</div>
 	</section>
 	<section>
@@ -86,11 +87,11 @@
 		</div>
 	</section>
 	<section><div class="row">
-		<div class="columns-2">
+		<div class="columns-2-margin-2">
 			<h2>Forms</h2>
 			<p>Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
 		</div>
-		<div class="columns-2">
+		<div class="columns-2-margin-2">
 			<form>				
 				<label>Name: </label><input type="text" placeholder="e.g. Rumplestiltskin...">
 				<br>
@@ -142,12 +143,12 @@
 					</ul>
 				</fieldset>
 				<br>
-				<button onclick="">Submit</button>
+				<button onclick="alert('You clicked the button!')">Submit</button>
 			</form>
 		</div>
 	</div></section>
 	<footer>
-		This is a test page. <a href="#">Link</a>
+		<p>This is a test page. <a href="#">Link</a></p>
 	</footer>
 </body>
 </html>

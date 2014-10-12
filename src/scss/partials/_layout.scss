@@ -4,44 +4,83 @@
 	margin: 0 auto;
 }
 
-// Column layouts
+// Column layouts with 2% space between columns
 @include columns(4, 2); //4-column layout with 2% margin
 @include columns(3, 2); //4-column layout with 2% margin
 @include columns(2, 2); //4-column layout with 2% margin
 @include columns(1, 2); //4-column layout with 2% margin
 
+// Column layouts with no space between columns
+@include grid(4);
+@include grid(3);
+@include grid(2);
+@include grid(1);
+
 // Rows (generic container)
 .row {
 	overflow: hidden; 
 	padding:0; 
+	@include mq(tablet) { padding: 0 0.5em; }
+	@include mq(phone) { padding: 0 0.5em; }
 	margin: 0 auto;
 	max-width: $max-wrap-width; 
 }
 
+.center {
+	text-align: center;
+}
+
 // Sections
+.site-title {
+    text-shadow: 3px 3px $color-medium;
+    font-size: 2em;
+    vertical-align: middle;
+	float: left;
+	margin: 0.1em 0;
+	@include mq(phone) { }
+}
 
 header {
-	float: left;
+	background-color: $color-light;
+	//box-shadow: 3px 3px 3px $color-dark;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 0.5em;
+}
+
+main {
+	margin-top: 3.4231em;
 }
 
 nav {
 	float: right;
-	@include mq(phone) { float: none; width: 100%; }
+	margin: 1em 0;
+	vertical-align: middle;
+	@include mq(phone) { }
 }
 
 nav ul {
-	list-style-type: none;
+	list-style: none;
+	@include mq(phone) { display: none; }
 }
 
 nav li { 
 	display: inline; 
 	margin-left: 1em;
-	@include mq(tablet)  { display: block; }
+	@include mq(tablet)  {}
 	@include mq(phone) { display: block; width: 100%; margin: 0 auto; }
 }
 
-section {
+.menu-button {
+	display: none;
+	@include mq(phone) { display: block; }
+}
 
+section {
+	margin: 1em 0;
+	clear: both;
 }
 
 aside {

@@ -61,6 +61,7 @@ gulp.task('html', function() {
     .pipe(gulp.dest('www'));
 });
 
+// Move custom fonts into build folder
 gulp.task('fonts', function() {
   gulp.src('src/fonts/*.*')
     .pipe(gulp.dest('www/fonts'));
@@ -87,7 +88,7 @@ gulp.task('images', function () {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/html/*.html', ['html']);
     gulp.watch('src/fonts/*.*', ['fonts']);
 });

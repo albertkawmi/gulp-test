@@ -1,11 +1,13 @@
 form {}
 
 label {
-	background-color: $color-light;
+	//background-color: $color-light;
+	font-weight: bold;
 	color: $color-dark;
 	padding: 0.5em;
-	margin-top: 0.5em;
+	margin: 0.5em 0 0 0;
 	display: block;
+	box-sizing: border-box;
 	width: 100%;
 }
 
@@ -13,9 +15,12 @@ input, textarea, select, fieldset {
 	padding: 0.5em;
 	border: solid 2px $color-light;
 	display: block;
+	box-sizing: border-box;
 	width: 100%;
 	margin: 0;
 }
+
+textarea { resize: vertical; }
 
 input:focus, textarea:focus, select:focus {
 	border-bottom: solid 2px $color-highlight;
@@ -33,13 +38,16 @@ button {
 	color: $color-white;
 	width: 100%;
 	border: 0;
+	border-bottom: solid 3px $color-dark;
 	padding: 0.5em;
 	margin-top: 0.5em;
 }
 
 button:hover {
-	background-color: $color-light;
-	color: $color-dark;
+	border-color: $color-highlight;
 }
 
-form li { display: inline; }
+form li { 
+	display: inline; 
+	@include mq(phone) { display: block; }
+}

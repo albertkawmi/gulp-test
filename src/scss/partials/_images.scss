@@ -1,13 +1,13 @@
 //default image
 img {
 	width: 100%;
-	margin: 1em;
+	margin: 1em auto;
 }
 
 p > img {
 	width: 33%;
-	float: left;
-	margin: 0 1em 1em 0;
-	@include mq(phone) { width: 100%; float: none; margin: 0.5em; }
+	float: right;
+	margin: 0 0 1em 1em;
+	@include mq(phone) { width: 100%; float: none; margin: 1em auto; }
 	@include mq(tablet) { width: 50%; }
 }

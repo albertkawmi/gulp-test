@@ -1,5 +1,5 @@
 // Mixins for responsive design
-$break-small: $iphone;
+$break-small: 600px;
 $break-large: $ipad-landscape;
 
 @mixin mq($media) {
@@ -24,21 +24,34 @@ $break-large: $ipad-landscape;
 */
 // Mixin for columns
 @mixin columns($columns, $margin-percentage) {
-  .columns-#{$columns} {
+  .columns-#{$columns}-margin-#{$margin-percentage} {
     width: (100/$columns - $margin-percentage + $margin-percentage/$columns) * 1%;
     margin-right: $margin-percentage * 1%;
+    padding: 0.5em;
     display: block;
     float: left;
     clear: none;
     vertical-align: top;
     @include mq(phone) { width: (100 - $margin-percentage)*1%; float: none; margin: 0.5*$margin-percentage*1% auto; }
   }
-  .columns-#{$columns}:last-child { 
+
+  .columns-#{$columns}-margin-#{$margin-percentage}:last-child { 
     margin-right: 0;
     @include mq(phone) {margin: 0.5*$margin-percentage*1% auto;}
-    }
+  }
 }
 
+// Mixin for grids (no margin)
+@mixin grid($columns) {
+  .grid-#{$columns} {
+    width: 100/$columns * 1%;
+    display: block;
+    float: left;
+    clear: none;
+    vertical-align: top;
+    @include mq(phone) { width: (100%; float: none; margin: 0 auto; }
+  }
+}
 /*
 .row {overflow: hidden; padding:0; margin: 0;} //needed to contain columns
 */
