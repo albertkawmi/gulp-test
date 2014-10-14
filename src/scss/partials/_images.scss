@@ -11,3 +11,17 @@ p > img {
 	@include mq(phone) { width: 100%; float: none; margin: 1em auto; }
 	@include mq(tablet) { width: 50%; }
 }
+
+figure.image {
+	background-color: $color-light;
+	padding: 0.5em;
+}
+
+figure.image > figcaption {
+
+}
+
+
+figure > img {
+	margin: 0;
+}

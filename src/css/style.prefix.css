@@ -2005,6 +2005,9 @@ p {
   font-family: Georgia, serif;
   font-size: 1em; }
 
+.small-text {
+  font-size: 0.8077em; }
+
 footer p {
   font-size: 0.6154em;
   font-family: Arial, Helvetica, sans-serif; }
@@ -2013,25 +2016,35 @@ pre, code {
   font-family: monospace; }
 
 blockquote {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Georgia, serif;
+  font-style: italic; }
 
 figcaption, caption {
   font-style: italic;
-  padding: 0.5rem;
-  text-align: center; }
+  padding: 0.5em;
+  text-align: center;
+  font-size: 0.8077em; }
 
 caption {
   font-size: 1em;
   font-style: normal;
   font-weight: bold; }
 
+a, a:visited {
+  color: blue; }
+
+a:hover {
+  text-decoration: none; }
+
 .wrap {
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0; }
 
 .columns-4-margin-2 {
   width: 23.5%;
   margin-right: 2%;
+  padding: 0.5em;
   display: block;
   float: left;
   clear: none;
@@ -2051,6 +2064,7 @@ caption {
 .columns-3-margin-2 {
   width: 32%;
   margin-right: 2%;
+  padding: 0.5em;
   display: block;
   float: left;
   clear: none;
@@ -2070,6 +2084,7 @@ caption {
 .columns-2-margin-2 {
   width: 49%;
   margin-right: 2%;
+  padding: 0.5em;
   display: block;
   float: left;
   clear: none;
@@ -2089,6 +2104,7 @@ caption {
 .columns-1-margin-2 {
   width: 100%;
   margin-right: 2%;
+  padding: 0.5em;
   display: block;
   float: left;
   clear: none;
@@ -2105,81 +2121,53 @@ caption {
     .columns-1-margin-2:last-child {
       margin: 1% auto; } }
 
-.columns-4-margin-0 {
+.grid-4 {
   width: 25%;
-  margin-right: 0%;
   display: block;
   float: left;
   clear: none;
   vertical-align: top; }
   @media only screen and (max-width: 600px) {
-    .columns-4-margin-0 {
+    .grid-4 {
       width: 100%;
       float: none;
-      margin: 0% auto; } }
+      margin: 0 auto; } }
 
-.columns-4-margin-0:last-child {
-  margin-right: 0; }
-  @media only screen and (max-width: 600px) {
-    .columns-4-margin-0:last-child {
-      margin: 0% auto; } }
-
-.columns-3-margin-0 {
+.grid-3 {
   width: 33.33333%;
-  margin-right: 0%;
   display: block;
   float: left;
   clear: none;
   vertical-align: top; }
   @media only screen and (max-width: 600px) {
-    .columns-3-margin-0 {
+    .grid-3 {
       width: 100%;
       float: none;
-      margin: 0% auto; } }
+      margin: 0 auto; } }
 
-.columns-3-margin-0:last-child {
-  margin-right: 0; }
-  @media only screen and (max-width: 600px) {
-    .columns-3-margin-0:last-child {
-      margin: 0% auto; } }
-
-.columns-2-margin-0 {
+.grid-2 {
   width: 50%;
-  margin-right: 0%;
   display: block;
   float: left;
   clear: none;
   vertical-align: top; }
   @media only screen and (max-width: 600px) {
-    .columns-2-margin-0 {
+    .grid-2 {
       width: 100%;
       float: none;
-      margin: 0% auto; } }
+      margin: 0 auto; } }
 
-.columns-2-margin-0:last-child {
-  margin-right: 0; }
-  @media only screen and (max-width: 600px) {
-    .columns-2-margin-0:last-child {
-      margin: 0% auto; } }
-
-.columns-1-margin-0 {
+.grid-1 {
   width: 100%;
-  margin-right: 0%;
   display: block;
   float: left;
   clear: none;
   vertical-align: top; }
   @media only screen and (max-width: 600px) {
-    .columns-1-margin-0 {
+    .grid-1 {
       width: 100%;
       float: none;
-      margin: 0% auto; } }
-
-.columns-1-margin-0:last-child {
-  margin-right: 0; }
-  @media only screen and (max-width: 600px) {
-    .columns-1-margin-0:last-child {
-      margin: 0% auto; } }
+      margin: 0 auto; } }
 
 .row {
   overflow: hidden;
@@ -2196,12 +2184,19 @@ caption {
 .center {
   text-align: center; }
 
+.bordered {
+  border: 1px solid grey; }
+
+.shaded {
+  background-color: silver; }
+
 .site-title {
   text-shadow: 3px 3px grey;
   font-size: 2em;
   vertical-align: middle;
   float: left;
-  margin: 0.1em 0; }
+  margin: 0.1em 0;
+  padding-left: 0.5em; }
   @media only screen and (max-width: 600px) { }
 
 header {
@@ -2210,22 +2205,28 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 0.5em; }
+  padding: 0;
+  z-index: 100; }
 
 main {
   margin-top: 3.4231em; }
 
 nav {
+  text-align: right;
+  list-style: none;
   float: right;
   margin: 1em 0;
   vertical-align: middle; }
-  @media only screen and (max-width: 600px) { }
-
-nav ul {
-  list-style: none; }
   @media only screen and (max-width: 600px) {
-    nav ul {
-      display: none; } }
+    nav {
+      float: none;
+      text-align: center;
+      margin: 0; } }
+
+@media only screen and (max-width: 600px) {
+  #menu {
+    display: none;
+    clear: both; } }
 
 nav li {
   display: inline;
@@ -2235,21 +2236,41 @@ nav li {
     nav li {
       display: block;
       width: 100%;
-      margin: 0 auto; } }
+      margin: auto auto;
+      padding: 0.5em 0;
+      border-top: 1px dotted white; } }
 
-.menu-button {
-  display: none; }
+#menu-button {
+  float: right;
+  display: none;
+  vertical-align: middle;
+  font-size: 1.5em;
+  margin: 0.5em;
+  padding-right: 0.5em; }
   @media only screen and (max-width: 600px) {
-    .menu-button {
+    #menu-button {
       display: block; } }
 
 section {
   margin: 1em 0;
   clear: both; }
 
+.bg-banner {
+  background: url('images/taxi.jpg');
+  background-size: cover;
+  min-height: 20em; }
+
+.banner-overlay {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  width: 50%;
+  color: white;
+  text-shadow: 3px 3px 3px black; }
+
 footer {
   margin-top: 1em;
-  padding: 1em;
+  padding: 0.5em;
   background-color: silver; }
 
 img {
@@ -2269,6 +2290,18 @@ p > img {
     p > img {
       width: 50%; } }
 
+figure.image {
+  background-color: silver;
+  padding: 0.5em; }
+
+figure > img {
+  margin: 0; }
+
+hr {
+  border: 1px dotted black;
+  padding: 0;
+  margin: 0; }
+
 /* pre, code & blockquotes *********************************************************************/
 pre, code {
   background: silver;
@@ -2281,7 +2314,7 @@ pre {
 
 blockquote {
   border-left: 0.5em solid grey;
-  padding: 0.5rem;
+  padding: 0.8077rem;
   padding-left: 1em;
   margin: 1em 10%;
   background-color: silver; }
@@ -2304,7 +2337,7 @@ th {
   color: white; }
 
 tfoot td {
-  border-top: 0.25em double black;
+  border-top: 0.25em solid black;
   font-weight: bold; }
 
 figure.table {
@@ -2368,8 +2401,19 @@ button {
 button:hover {
   border-color: blue; }
 
+form ul {
+  display: block;
+  -webkit-columns: 2 150px;
+     -moz-columns: 2 150px;
+          columns: 2 150px;
+  -webkit-column-gap: 0.5em;
+     -moz-column-gap: 0.5em;
+          column-gap: 0.5em; }
+
 form li {
-  display: inline; }
+  display: block;
+  width: 100%;
+  float: left; }
   @media only screen and (max-width: 600px) {
     form li {
       display: block; } }

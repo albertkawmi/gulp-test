@@ -9,50 +9,72 @@
 <body>
 <!-- Header :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <header>
-	<div class="row">
+	
+	<div class="wrap">
 		<h1 class="site-title"><i class="fa fa-plug"></i> Test Page</h1>	
-		<nav>
-			<ul>
+		<div id="menu-button"><i class="fa fa-bars"></i></div>
+		<nav>		
+			<ul id="menu">
 				<li><a href="#">Link 1</a></li>
 				<li><a href="#">Link 2</a></li>
 				<li><a href="#">Link 3</a></li>
-			</ul>
-		<div class="menu-button"><i class="fa fa-bars"></i></div>
+			</ul>		
 		</nav>
 	</div>
 </header>
 <!-- Main :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <main>
+	<section class="bg-banner">
+		<div class="banner-overlay"><h1>Welcome to this test site</h1></div>
+	</section>
 	<section>
 		<div class="row">
 			<h1>Heading 1</h1>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 		</div>
 	</section>
+	<hr />
 	<section>
 		<div class="row">
 			<h2>Heading 2</h2>
+			<p>Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
 			<img src="images/taxi.jpg">
+			<p class="small-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing.</p>
 		</div>
 	</section>
+	<hr />
 	<section>
 		<div class="row">
 			<h2>Row of four</h2>
-			<div class="columns-4-margin-2">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. </div>
-			<div class="columns-4-margin-2">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
-			<div class="columns-4-margin-2">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </div>
-			<div class="columns-4-margin-2">Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</div>
+			<div class="columns-4-margin-2 small-text bordered">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. </div>
+			<div class="columns-4-margin-2 small-text bordered">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</div>
+			<div class="columns-4-margin-2 small-text bordered">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. </div>
+			<div class="columns-4-margin-2 small-text bordered">Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</div>
 		</div>
 	</section>
+	<hr />
 	<section>
 		<div class="row">
 			<h2>Font Awesome</h2>
-			<div class="columns-4-margin-2 center"><i class="fa fa-check fa-5x"></i></div>
-			<div class="columns-4-margin-2 center"><i class="fa fa-heart fa-5x"></i></div>
-			<div class="columns-4-margin-2 center"><i class="fa fa-bar-chart fa-5x"></i></div>
-			<div class="columns-4-margin-2 center"><i class="fa fa-line-chart fa-5x"></i></div>
+			<div class="columns-4-margin-2 center shaded">
+				<p><i class="fa fa-check fa-5x"></i></p>
+				<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+			</div>
+			<div class="columns-4-margin-2 center shaded">
+				<p><i class="fa fa-heart fa-5x"></i></p>
+				<p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+			</div>
+			<div class="columns-4-margin-2 center shaded">
+				<p><i class="fa fa-bar-chart fa-5x"></i></p>
+				<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
+			</div>
+			<div class="columns-4-margin-2 center shaded">
+				<p><i class="fa fa-line-chart fa-5x"></i></p>
+				<p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+			</div>
 		</div>
 	</section>
+	<hr />
 	<section>
 		<div class="row">
 			<h3>Heading 3</h3>
@@ -62,6 +84,7 @@
 			<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing.</p>
 		</div>
 	</section>
+	<hr />
 	<section>
 		<div class="row">
 			<h3>Tables</h3>
@@ -86,10 +109,16 @@
 			</figure>
 		</div>
 	</section>
+	<hr />
 	<section><div class="row">
 		<div class="columns-2-margin-2">
 			<h2>Forms</h2>
 			<p>Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+			<figure class="image">
+				<img src="images/taxi.jpg">
+				<figcaption>Here's a caption for an image</figcaption>
+			</figure>
+			<p class="small-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 		</div>
 		<div class="columns-2-margin-2">
 			<form>				
@@ -140,6 +169,10 @@
 						<li><input type="checkbox" name="agree" value="Apples">Apples</li>
 						<li><input type="checkbox" name="agree" value="Oranges">Oranges</li>
 						<li><input type="checkbox" name="agree" value="Bananas">Bananas</li>
+						<li><input type="checkbox" name="agree" value="Bananas">Avocados</li>
+						<li><input type="checkbox" name="agree" value="Bananas">Pears</li>
+						<li><input type="checkbox" name="agree" value="Bananas">Watermelons</li>
+						<li><input type="checkbox" name="agree" value="Bananas">Grapes</li>
 					</ul>
 				</fieldset>
 				<br>
@@ -148,7 +181,46 @@
 		</div>
 	</div></section>
 	<footer>
-		<p>This is a test page. <a href="#">Link</a></p>
+		<div class="row center">
+			<p>This is a test page. <a href="#">Link</a></p>
+		</div>
 	</footer>
+	<script>
+	var button = document.getElementById('menu-button');
+	var menu = document.getElementById('menu');
+	var hideMenuWhenClicked = false;
+
+	function toggleMenu() {
+		if(menu.style.display !== "block") { menu.style.display = "block";}
+		else { menu.style.display = "none"; }
+		hideMenuWhenClicked = true;
+	}
+
+	function hideMenu() {
+		if(hideMenuWhenClicked) { 
+			menu.style.display = "none"; 
+			hideMenuWhenClicked = false;
+		}
+	}
+
+	function dummyForm() {
+		alert("This form doesn't do anything...");
+	}
+
+	function windowResize() {
+    	if(window.getComputedStyle(button).getPropertyValue('display') === "none") {
+    		menu.style.display = "block";
+    		hideMenuWhenClicked = false;
+    	}
+    	else {
+    		menu.style.display = "none";
+    	}
+
+	}
+
+	button.onclick = toggleMenu;
+	menu.onclick = hideMenu;
+	window.onresize = windowResize;
+	</script>
 </body>
 </html>

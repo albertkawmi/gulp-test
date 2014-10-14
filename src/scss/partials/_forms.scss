@@ -47,7 +47,15 @@ button:hover {
 	border-color: $color-highlight;
 }
 
+form ul {
+	display: block;
+	columns: 2 150px;
+	column-gap: 0.5em;
+}
+
 form li { 
-	display: inline; 
+	display: block;
+	width: 100%;
+	float: left; 
 	@include mq(phone) { display: block; }
 }

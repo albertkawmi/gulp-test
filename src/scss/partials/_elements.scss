@@ -1,3 +1,9 @@
+hr {
+    border: 1px dotted $color-dark;
+    padding: 0;
+    margin: 0;
+}
+
 /* pre, code & blockquotes *********************************************************************/
 pre, code {
     background: $color-light;
@@ -12,10 +18,10 @@ pre {
 
 blockquote {
     border-left: 0.5em solid $color-medium;
-    padding: 0.5rem;
+    padding: 0.8077rem;
     padding-left: 1em;
     margin: 1em 10%;
-    background-color: $color-light;
+    background-color: $color-light; 
 }
 
 /***** Tables *********************************************************************************/
@@ -39,7 +45,7 @@ th {
 }
 
 tfoot td {
-    border-top: 0.25em double $color-dark;
+    border-top: 0.25em solid $color-dark;
     font-weight: bold;
 }
 

@@ -2,6 +2,7 @@
 .wrap {
 	max-width: $max-wrap-width;
 	margin: 0 auto;
+	padding: 0;
 }
 
 // Column layouts with 2% space between columns
@@ -26,8 +27,17 @@
 	max-width: $max-wrap-width; 
 }
 
+// Basic style classes
 .center {
 	text-align: center;
+}
+
+.bordered {
+	border: 1px solid $color-medium;
+}
+
+.shaded {
+	background-color: $color-light;
 }
 
 // Sections
@@ -37,6 +47,7 @@
     vertical-align: middle;
 	float: left;
 	margin: 0.1em 0;
+	padding-left: 0.5em;
 	@include mq(phone) { }
 }
 
@@ -47,7 +58,8 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 0 0.5em;
+	padding: 0;
+	z-index: 100;
 }
 
 main {
@@ -55,26 +67,45 @@ main {
 }
 
 nav {
+	text-align: right;
+	list-style: none;
 	float: right;
 	margin: 1em 0;
 	vertical-align: middle;
-	@include mq(phone) { }
+	@include mq(phone) { 
+		float: none;
+		text-align: center;
+		margin: 0;
+	}
 }
 
-nav ul {
-	list-style: none;
-	@include mq(phone) { display: none; }
+#menu {
+	@include mq(phone) { 
+		display: none; 
+		clear: both;
+	}
 }
 
 nav li { 
 	display: inline; 
 	margin-left: 1em;
-	@include mq(tablet)  {}
-	@include mq(phone) { display: block; width: 100%; margin: 0 auto; }
+	@include mq(tablet) {}
+	@include mq(phone) { 
+		display: block; 
+		width: 100%; 
+		margin: auto auto;
+		padding: 0.5em 0; 
+		border-top: 1px dotted $color-white;
+	}
 }
 
-.menu-button {
+#menu-button {
+	float: right;
 	display: none;
+	vertical-align: middle;
+	font-size: 1.5em;
+	margin: 0.5em;
+	padding-right: 0.5em;
 	@include mq(phone) { display: block; }
 }
 
@@ -83,12 +114,27 @@ section {
 	clear: both;
 }
 
+.bg-banner {
+	background: url('images/taxi.jpg');
+	background-size: cover;
+	min-height: 20em;
+}
+
+.banner-overlay {
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	width: 50%;
+	color: $color-white;
+	text-shadow: 3px 3px 3px $color-dark;
+}
+
 aside {
 
 }
 
 footer {
 	margin-top: 1em;
-	padding: 1em;
+	padding: 0.5em;
 	background-color: $color-light;
 }

@@ -38,6 +38,10 @@ p {
 	font-size: 1em;
 }
 
+.small-text {
+	font-size: 0.8077em;
+}
+
 footer p {
 	font-size: 0.6154em;
 	font-family: $base-font-family-sans;
@@ -47,12 +51,15 @@ footer p {
 pre, code { font-family: $base-font-family-mono; }
 
 blockquote { 
-	font-family: $base-font-family-sans;  }
+	font-family: $base-font-family-serif;
+	font-style: italic;
+}
 
 figcaption, caption {
     font-style: italic;
-    padding: 0.5rem;
+    padding: 0.5em;
     text-align: center;
+    font-size: 0.8077em;
 }
 
 caption { 
