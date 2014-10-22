@@ -32,7 +32,7 @@ $break-large: $ipad-landscape;
     float: left;
     clear: none;
     vertical-align: top;
-    @include mq(phone) { width: (100 - $margin-percentage)*1%; float: none; margin: 0.5*$margin-percentage*1% auto; }
+    @include mq(phone) { width: (100 - $margin-percentage)*1%; float: none; margin: $margin-percentage*1% auto; }
   }
 
   .columns-#{$columns}-margin-#{$margin-percentage}:last-child { 
@@ -55,3 +55,24 @@ $break-large: $ipad-landscape;
 /*
 .row {overflow: hidden; padding:0; margin: 0;} //needed to contain columns
 */
+
+// Mixin for overlays
+@mixin overlay($name, $height, $lines, $line-height, $font-size, $img-url) {
+
+  .bg-banner-#{$name} {
+    background: url($img-url);
+    background-size: cover;
+    min-height: $height;
+  }
+
+  .banner-overlay-#{$name} {
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: 0 auto;
+    position: relative;
+    top: ($height / 2)-($lines * $font-size * $line-height / 4);
+    overflow: hidden;
+    height: $lines * $font-size * $line-height;
+    width: fit-content;
+  }
+} 

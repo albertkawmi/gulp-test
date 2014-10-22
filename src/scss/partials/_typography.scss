@@ -6,6 +6,14 @@
 // 4:7 Finbonacci = ... 0.6154, 1, 1.6364, 2.6364, 4.2727, [6.9091]
 // Le Corbusier = 0.6154, 0.8077, 1, 1.3077, 2.1154, 3.4231, [5.5386]
 
+$font-size-huge: 5.5386em;
+$font-size-title: 3.4231em;
+$font-size-heading: 2.1154em;
+$font-size-subheading: 1.3077em;
+$font-size-normal: 1em;
+$font-size-small: 0.8077em; 
+$font-size-tiny: 0.6154em;
+
 // Base font
 html {
 	font-family: $base-font-family-sans;
@@ -21,29 +29,29 @@ p { margin: 1em 0; }
 
 // Headings
 h1 {
-	font-size: 3.4231em;
+	font-size: $font-size-title
 }
 
 h2 {
-	font-size: 2.1154em;
+	font-size: $font-size-heading;
 }
 
 h3 {
-	font-size: 1.3077em;
+	font-size: $font-size-subheading;
 }
 
 // Paragraph & default div
 p {
 	font-family: $base-font-family-serif;
-	font-size: 1em;
+	font-size: $font-size-normal;
 }
 
 .small-text {
-	font-size: 0.8077em;
+	font-size: $font-size-small;
 }
 
 footer p {
-	font-size: 0.6154em;
+	font-size: $font-size-tiny;
 	font-family: $base-font-family-sans;
 }
 
@@ -59,11 +67,11 @@ figcaption, caption {
     font-style: italic;
     padding: 0.5em;
     text-align: center;
-    font-size: 0.8077em;
+    font-size: $font-size-small;
 }
 
 caption { 
-    font-size: 1em; 
+    font-size: $font-size-normal; 
     font-style: normal;
     font-weight: bold;
 }

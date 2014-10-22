@@ -103,7 +103,7 @@ gulp.task('webserver', function() {
   connect.server({
     root: 'www',
     port: 80,
-    //host: 'albert.dev', // not working ??? Using default 'localhost' instead
+    //host: '127.0.0.2', // not working ??? Using default 'localhost' instead
     livereload: true
   });
 });

@@ -89,7 +89,7 @@ nav {
 nav li { 
 	display: inline; 
 	margin-left: 1em;
-	@include mq(tablet) {}
+	@include mq(tablet) { margin: 0 0.5em; }
 	@include mq(phone) { 
 		display: block; 
 		width: 100%; 
@@ -114,21 +114,6 @@ section {
 	clear: both;
 }
 
-.bg-banner {
-	background: url('images/taxi.jpg');
-	background-size: cover;
-	min-height: 20em;
-}
-
-.banner-overlay {
-	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	width: 50%;
-	color: $color-white;
-	text-shadow: 3px 3px 3px $color-dark;
-}
-
 aside {
 
 }
@@ -138,3 +123,13 @@ footer {
 	padding: 0.5em;
 	background-color: $color-light;
 }
+
+// $height, $lines, $line-height, $font-size, $img-url
+@include overlay(test, 600px, 1, 2, 28px, 'images/taxi.jpg');
+
+.banner-overlay-test {
+    color: $color-white;
+    text-shadow: 3px 3px 3px $color-dark;
+    text-align: center;
+    background-color: $color-dark; 
+  } 
