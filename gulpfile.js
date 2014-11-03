@@ -85,7 +85,7 @@ gulp.task('fonts', function() {
 gulp.task('images', function () {
   gulp.src('src/images/*')
     .pipe(imageResize({ 
-      width : 650,
+      width : 1500,
       //height : 100,
       upscale : false, // false = only shrink, don't stretch images
       crop : false,
